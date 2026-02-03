@@ -137,6 +137,7 @@
             justify-content: space-between;
             padding: 20px 60px;
             position: relative;
+            margin-bottom: 0;
         }
 
         /* Left Section */
@@ -288,68 +289,138 @@
 
         /* Footer */
         footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 25px 60px;
-            background-color: #f5ede4;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            position: relative;
+            bottom: auto;
+            left: auto;
+            right: auto;
+            padding: 50px 60px;
+            background-color: #f5ede4; /* match page background */
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            font-size: 13px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
         }
 
-        .footer-left {
+        .footer-section {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
             color: #d4956b;
         }
 
-        .footer-left i {
-            font-size: 24px;
-        }
-
-        .footer-left span {
-            font-weight: 600;
-            color: #000;
-        }
-
-        .footer-right {
+        .footer-logo {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .footer-logo i {
+            font-size: 28px;
+            color: #ff8c00;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            font-size: 18px;
+            color: #ff8c00;
+            margin-top: 2px;
         }
 
         .social-icons {
             display: flex;
-            gap: 15px;
+            gap: 12px;
+            margin-top: 10px;
         }
 
         .social-icons a {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: #d4956b;
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            background: #000;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             transition: all 0.3s;
         }
 
         .social-icons a:hover {
-            background: #000;
-            transform: scale(1.1);
+            background: #d4956b;
         }
 
-        .copyright {
-            color: #666;
-            font-size: 11px;
+        .app-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .app-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .app-button:hover {
+            background: #d4956b;
+        }
+
+        .app-button i {
+            font-size: 18px;
         }
 
         /* Responsive */
@@ -471,10 +542,8 @@
     <div class="main-container">
         <!-- Left Section -->
         <div class="left-section">
-            <h2>NEW ARRIVALS</h2>
-            <h1>JUST FOR</h1>
-            <div class="highlight">you</div>
-            <p>Discover our latest collection of premium products designed exclusively for you.</p>
+            <div class="highlight">Built for Your Lifestyle</div>
+            <p>Whether you’re looking for music, fashion, healthy nuts, or dependable services, we’re here to serve you with quality and commitment.</p>
         </div>
 
         <!-- Center Section - Image -->
@@ -501,19 +570,57 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-left">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>BUILDING NAME<br>MAIN ROAD, COUNTRY, 45612</span>
+        <!-- Left Section: Logo & Description -->
+        <div class="footer-section">
+            <div class="footer-logo">
+                <i class="fas fa-shopping-cart"></i>
+                <span>BMB</span>
+            </div>
+            <p>Welcome to BMB! Discover our range of quality products. Whether you're looking for music instruments, fashion, healthy nuts, or services, we've got you covered. Stay connected via social media for the latest news and offers. Thanks for choosing us!</p>
         </div>
 
-        <div class="footer-right">
-            <div class="social-icons">
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <!-- Middle Left: Important Links -->
+        <div class="footer-section">
+            <h3>Important Links</h3>
+            <div class="footer-links">
+                <a href="#introduction">Introduction</a>
+                <a href="#products">Our Products</a>
+                <a href="#advertisement">Advertisement</a>
+                <a href="#testimonials">Testimonials</a>
             </div>
-            <span class="copyright">© Company Name 2026. All rights reserved.</span>
+        </div>
+
+        <!-- Middle Right: Information -->
+        <div class="footer-section">
+            <h3>Information</h3>
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#privacy">Privacy policy</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <!-- Right Section: Contact & Social -->
+        <div class="footer-section">
+            <h3>Contact & Follow</h3>
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Maddumargwatta, Housing Scheme, Nugegoda</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+94 750606206</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
