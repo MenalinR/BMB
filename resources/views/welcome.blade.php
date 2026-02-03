@@ -186,16 +186,17 @@
         }
 
         .image-circle {
-            width: 350px;
-            height: 350px;
+            width: 450px;
+            height: 450px;
             border-radius: 50%;
             background: white;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             position: relative;
+            filter: brightness(0.65);
         }
 
         .image-circle img {
@@ -222,7 +223,7 @@
         .image-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(212, 149, 107, 0.1), rgba(0, 0, 0, 0.1));
+            background: linear-gradient(135deg, rgba(212, 149, 107, 0.05), rgba(0, 0, 0, 0.05));
             pointer-events: none;
         }
 
@@ -291,12 +292,12 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 15px 60px;
+            padding: 25px 60px;
             background-color: #f5ede4;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 11px;
+            font-size: 14px;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
@@ -308,7 +309,7 @@
         }
 
         .footer-left i {
-            font-size: 18px;
+            font-size: 24px;
         }
 
         .footer-left span {
@@ -328,8 +329,8 @@
         }
 
         .social-icons a {
-            width: 35px;
-            height: 35px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             background: #d4956b;
             color: white;
@@ -337,7 +338,7 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px;
             transition: all 0.3s;
         }
 
@@ -388,13 +389,8 @@
             }
 
             footer {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .footer-right {
-                flex-direction: column;
-                gap: 15px;
+                padding: 20px 40px;
+                font-size: 12px;
             }
         }
 
@@ -439,7 +435,7 @@
 
             footer {
                 padding: 15px 20px;
-                font-size: 10px;
+                font-size: 11px;
             }
         }
     </style>

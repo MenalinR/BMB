@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
+            background: #f5ede4;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -34,7 +34,7 @@
 
         .login-left {
             flex: 1;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #3b6cb5 50%, #4a7cc8 75%, #5a8fd9 100%);
+            background: linear-gradient(135deg, #d4956b 0%, #c9845a 25%, #bf7349 50%, #b56238 75%, #ab5127 100%);
             position: relative;
             overflow: hidden;
             display: flex;
@@ -141,7 +141,7 @@
 
         .login-right h2 {
             font-size: 32px;
-            color: #4a7cc8;
+            color: #d4956b;
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -161,7 +161,7 @@
             width: 100%;
             padding: 12px 15px;
             border: none;
-            border-left: 4px solid #4a7cc8;
+            border-left: 4px solid #d4956b;
             background: #f8f9fa;
             font-size: 14px;
             transition: all 0.3s ease;
@@ -175,7 +175,7 @@
         .form-group input:focus {
             outline: none;
             background: #f0f0f0;
-            border-left-color: #2a5298;
+            border-left-color: #c9845a;
         }
 
         .form-options {
@@ -197,7 +197,7 @@
             width: 16px;
             height: 16px;
             cursor: pointer;
-            accent-color: #4a7cc8;
+            accent-color: #d4956b;
         }
 
         .form-options .remember label {
@@ -206,20 +206,20 @@
         }
 
         .form-options a {
-            color: #4a7cc8;
+            color: #d4956b;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .form-options a:hover {
-            color: #2a5298;
+            color: #b56238;
         }
 
         .submit-btn {
             width: 100%;
             padding: 14px 30px;
-            background: linear-gradient(135deg, #4a7cc8, #2a5298);
+            background: linear-gradient(135deg, #d4956b, #b56238);
             color: white;
             border: none;
             border-radius: 30px;
@@ -232,8 +232,8 @@
         }
 
         .submit-btn:hover {
-            background: linear-gradient(135deg, #5a8fd9, #1e3c72);
-            box-shadow: 0 5px 20px rgba(42, 82, 152, 0.3);
+            background: linear-gradient(135deg, #e0a378, #a85030);
+            box-shadow: 0 5px 20px rgba(212, 149, 107, 0.3);
             transform: translateY(-2px);
         }
 
