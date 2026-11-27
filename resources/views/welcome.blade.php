@@ -16,6 +16,9 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5ede4;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Header */
@@ -35,7 +38,6 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
             font-size: 24px;
             font-weight: 800;
         }
@@ -45,10 +47,17 @@
             color: #000;
         }
 
+        .logo img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
         .logo-text {
             display: flex;
             flex-direction: column;
             line-height: 1;
+            gap: 12px;
         }
 
         .logo-text .online {
@@ -59,9 +68,15 @@
 
         .logo-text .store {
             color: #d4956b;
-            font-size: 20px;
-            font-style: italic;
-            font-weight: 700;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo-text .store:first-child {
+            color: #333;
         }
 
         nav {
@@ -74,7 +89,7 @@
         nav a {
             text-decoration: none;
             color: #000;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -97,11 +112,12 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 16px;
         }
 
         .call-number {
             color: #000;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 800;
         }
 
@@ -131,19 +147,23 @@
         /* Main Container */
         .main-container {
             margin-top: 70px;
-            height: calc(100vh - 140px);
+            height: calc(100vh - 420px);
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 20px 60px;
+            
+            padding: 20px 90px 20px 60px;
             position: relative;
-            margin-bottom: 0;
+            gap: 100px;
+            flex: 1;
         }
 
         /* Left Section */
         .left-section {
-            flex: 1;
+            flex: 0 0 600px;
             z-index: 2;
+            text-align: left;
+            padding-right: 10px;
+            align-self: center;
         }
 
         .left-section h2 {
@@ -164,32 +184,60 @@
         }
 
         .left-section .highlight {
-            font-size: 60px;
-            color: #d4956b;
-            font-style: italic;
-            font-weight: 700;
+            font-size: 64px;
+            color: #2c3e50;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
         }
 
         .left-section p {
-            font-size: 14px;
-            color: #999;
+            font-size: 15px;
+            color: #555;
             margin-top: 20px;
+            line-height: 1.8;
+            max-width: 600px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            margin-bottom: 30px;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: lowercase;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .shop-btn:hover {
+            background: #1a252f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* Center Section - Image */
         .center-section {
-            flex: 1;
+            flex: 0 0 420px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             position: relative;
             z-index: 1;
+            margin-left: 20px;
         }
 
         .image-circle {
-            width: 450px;
-            height: 450px;
-            border-radius: 50%;
+            width: 1100px;
+            height: 650px;
+            border-radius: 16px;
             background: white;
             display: flex;
             align-items: center;
@@ -230,61 +278,46 @@
 
         /* Right Section */
         .right-section {
-            flex: 1;
+            flex: 0.8;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: flex-start;
             justify-content: center;
             z-index: 2;
+            padding-left: 20px;
         }
 
         .right-section h3 {
+            font-size: 28px;
+            color: #000;
+            font-weight: 700;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            text-align: left;
+        }
+
+        .services-list p {
             font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            margin: 0;
+        }
+
+        .services-list p strong {
             color: #000;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .discount-section {
-            text-align: right;
-        }
-
-        .discount-section .discount-percent {
-            font-size: 80px;
-            color: #d4956b;
-            font-weight: 800;
-            line-height: 0.9;
-        }
-
-        .discount-section .discount-label {
-            font-size: 20px;
-            color: #d4956b;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .underline {
-            width: 80px;
-            height: 3px;
-            background: #000;
-            margin: 20px auto 0;
-        }
-
-        /* Decorative Circle */
-        .decorative-circle {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: #d4956b;
-            opacity: 0.3;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 0;
         }
 
         /* Footer */
@@ -293,26 +326,27 @@
             bottom: auto;
             left: auto;
             right: auto;
-            padding: 50px 60px;
-            background-color: #f5ede4; /* match page background */
+            padding: 30px 60px;
+            background-color: #f5ede4;
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-            gap: 40px;
-            font-size: 13px;
+            gap: 30px;
+            font-size: 12px;
             border-top: 1px solid rgba(0, 0, 0, 0.06);
+            margin-top: auto;
         }
 
         .footer-section {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
         }
 
         .footer-section h3 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #000;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .footer-section p {
@@ -324,7 +358,7 @@
         .footer-links {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 8px;
         }
 
         .footer-links a {
@@ -350,6 +384,12 @@
         .footer-logo i {
             font-size: 28px;
             color: #ff8c00;
+        }
+
+        .footer-logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
         }
 
         .footer-contact {
@@ -515,11 +555,11 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <i class="fas fa-shopping-cart"></i>
+            <img src="{{ asset('images/bmb.png') }}" alt="BMB Logo">
             <div class="logo-text">
                 <span class="store">Blessing</span>
-                <span class="store">Multi</span>
-                <span class="store">Business</span>
+                <span class="store">Multi Business</span>
+
             </div>
         </div>
 
@@ -528,11 +568,12 @@
             <a href="#products">PRODUCTS</a>
             <a href="#about">ABOUT</a>
             <a href="#contact">CONTACT</a>
+            <a href="#contact">SERVICES</a>
         </nav>
 
         <div class="call-section">
             <span class="call-label">CALL NOW</span>
-            <span class="call-number">1800 888 555</span>
+            <span class="call-number">+94 779 090 517</span>
         </div>
 
         <a href="{{ route('login') }}" class="login-btn">Login</a>
@@ -543,7 +584,8 @@
         <!-- Left Section -->
         <div class="left-section">
             <div class="highlight">Built for Your Lifestyle</div>
-            <p>Whether you’re looking for music, fashion, healthy nuts, or dependable services, we’re here to serve you with quality and commitment.</p>
+            <p>We are a multi-business platform designed to make your life easier. From quality musical instruments and stylish clothing to fresh nuts and trusted services, we bring everything together in one convenient place. Our focus is on quality, reliability, and customer satisfaction.</p>
+            <a href="#shop" class="shop-btn">shop now</a>
         </div>
 
         <!-- Center Section - Image -->
@@ -553,19 +595,6 @@
                 <div class="image-overlay"></div>
             </div>
         </div>
-
-        <!-- Right Section -->
-        <div class="right-section">
-            <h3>FOR<br>ONLINE<br>ORDER</h3>
-            <div class="discount-section">
-                <div class="discount-percent">30%</div>
-                <div class="discount-label">OFF</div>
-                <div class="underline"></div>
-            </div>
-        </div>
-
-        <!-- Decorative Circle -->
-        <div class="decorative-circle"></div>
     </div>
 
     <!-- Footer -->
@@ -573,7 +602,7 @@
         <!-- Left Section: Logo & Description -->
         <div class="footer-section">
             <div class="footer-logo">
-                <i class="fas fa-shopping-cart"></i>
+                <img src="{{ asset('images/bmb.png') }}" alt="BMB Logo">
                 <span>BMB</span>
             </div>
             <p>Welcome to BMB! Discover our range of quality products. Whether you're looking for music instruments, fashion, healthy nuts, or services, we've got you covered. Stay connected via social media for the latest news and offers. Thanks for choosing us!</p>
@@ -607,11 +636,11 @@
             <div class="footer-contact">
                 <div class="contact-info">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Maddumargwatta, Housing Scheme, Nugegoda</span>
+                    <span>Savatkaddu, Mannar</span>
                 </div>
                 <div class="contact-info">
                     <i class="fas fa-phone"></i>
-                    <span>+94 750606206</span>
+                    <span>+94 779090517</span>
                 </div>
                 <div class="social-icons">
                     <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
