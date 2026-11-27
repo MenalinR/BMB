@@ -139,6 +139,26 @@
             justify-content: center;
         }
 
+        .login-left a.logo {
+            color: white;
+            text-decoration: none;
+            align-self: flex-start;
+        }
+
+        .back-link {
+            align-self: flex-start;
+            margin-bottom: 24px;
+            color: #888;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #d4956b;
+        }
+
         .login-right h2 {
             font-size: 32px;
             color: #d4956b;
@@ -286,7 +306,7 @@
     <div class="login-container">
         <!-- Left Panel -->
         <div class="login-left">
-            <div class="logo">BMB</div>
+            <a href="{{ route('home') }}" class="logo">BMB</a>
            
             <div class="subtitle">Nice to see you again</div>
             <h1>WELCOME BACK</h1>
@@ -300,6 +320,7 @@
 
         <!-- Right Panel -->
         <div class="login-right">
+            <a href="{{ route('home') }}" class="back-link">&larr; Back to home</a>
             <h2>Login Account</h2>
             <p class="subtitle-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh. 
