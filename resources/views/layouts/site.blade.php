@@ -36,6 +36,7 @@
             <span class="call-number">{{ config('business.phone') }}</span>
         </a>
 
+        {{-- Customers don't log in; the owner's login link is in the footer. --}}
         @auth
             @if (auth()->user()->is_admin)
                 <a href="{{ route('admin.products.index') }}" class="login-btn">Admin</a>
@@ -45,8 +46,6 @@
                     <button type="submit" class="login-btn" style="border:0;cursor:pointer;">Logout</button>
                 </form>
             @endif
-        @else
-            <a href="{{ route('login') }}" class="login-btn">Login</a>
         @endauth
     </header>
 
@@ -76,6 +75,9 @@
             <div class="footer-links">
                 <a href="{{ route('about') }}">About Us</a>
                 <a href="{{ route('contact') }}">Contact</a>
+                @guest
+                    <a href="{{ route('login') }}" class="owner-login"><i class="fas fa-lock"></i> Owner login</a>
+                @endguest
             </div>
         </div>
 

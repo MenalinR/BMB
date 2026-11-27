@@ -615,6 +615,17 @@ footer {
     color: var(--accent);
 }
 
+.footer-links a.owner-login {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer-links a.owner-login i {
+    font-size: 10px;
+    margin-right: 3px;
+}
+
 .footer-logo {
     display: flex;
     align-items: center;
