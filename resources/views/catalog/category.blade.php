@@ -49,7 +49,7 @@
                     <div class="product-card">
                         <div class="product-image">
                             @if ($product->image)
-                                <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" loading="lazy">
+                                <img src="{{ $product->imageUrl() }}" alt="{{ $product->name }}" loading="lazy">
                             @else
                                 <i class="fas {{ $category->icon ?? 'fa-box' }}"></i>
                             @endif

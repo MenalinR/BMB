@@ -11,7 +11,14 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'admin' => \App\Http\Middleware\EnsureUserIsAdmin::class,
+        ]);
+
+        // Logged-in users who open /login: admins go to the admin area, others to the home page.
+        $middleware->redirectUsersTo(fn (\Illuminate\Http\Request $request) => $request->user()?->is_admin
+            ? route('admin.products.index')
+            : route('home'));
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

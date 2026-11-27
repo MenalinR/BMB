@@ -37,10 +37,14 @@
         </a>
 
         @auth
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="login-btn" style="border:0;cursor:pointer;">Logout</button>
-            </form>
+            @if (auth()->user()->is_admin)
+                <a href="{{ route('admin.products.index') }}" class="login-btn">Admin</a>
+            @else
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="login-btn" style="border:0;cursor:pointer;">Logout</button>
+                </form>
+            @endif
         @else
             <a href="{{ route('login') }}" class="login-btn">Login</a>
         @endauth
@@ -64,8 +68,6 @@
             <div class="footer-links">
                 <a href="{{ route('shop') }}">Shop</a>
                 <a href="{{ route('rentals') }}">Rentals</a>
-                <a href="{{ route('rentals.category', 'car-rental') }}">Car Rental</a>
-                <a href="{{ route('shop.category', 'used-products') }}">Used Products</a>
             </div>
         </div>
 
