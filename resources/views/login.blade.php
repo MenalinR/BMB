@@ -87,13 +87,14 @@
             letter-spacing: 2px;
         }
 
-        .login-left .logo::before {
-            content: '';
-            width: 30px;
-            height: 30px;
-            background: rgba(255, 255, 255, 0.3);
+        .login-left .logo img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            background: white;
             border-radius: 50%;
-            margin-right: 15px;
+            padding: 4px;
+            margin-right: 14px;
         }
 
         .login-left h1 {
@@ -306,15 +307,15 @@
     <div class="login-container">
         <!-- Left Panel -->
         <div class="login-left">
-            <a href="{{ route('home') }}" class="logo">BMB</a>
-           
+            <a href="{{ route('home') }}" class="logo">
+                <img src="{{ asset('images/bmb.png') }}" alt="">
+                <span>Blessing Multi Business</span>
+            </a>
+
             <div class="subtitle">Nice to see you again</div>
             <h1>WELCOME BACK</h1>
             <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed diam nonummy nibh. 
-                Ut consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Manage your shop and rentals in one place.
             </p>
         </div>
 
@@ -323,8 +324,7 @@
             <a href="{{ route('home') }}" class="back-link">&larr; Back to home</a>
             <h2>Login Account</h2>
             <p class="subtitle-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh. 
-                Ut consequat. Duis aute irure dolor in reprehenderit.
+                Sign in to update items, prices and photos.
             </p>
 
             @if ($errors->any())
@@ -363,7 +363,6 @@
                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
                         <span>Keep me signed in</span>
                     </label>
-                    <a href="#">Already a member?</a>
                 </div>
 
                 <button type="submit" class="submit-btn">Login</button>
